@@ -18,7 +18,7 @@ function App() {
     <div className="min-h-screen bg-white text-neutral-900 font-serif selection:bg-neutral-200">
       {/* Background Particles */}
       <Particles
-        className="fixed inset-0 pointer-events-none z-0"
+        className="fixed inset-0 pointer-events-none z-0 hidden md:block"
         quantity={100}
         ease={80}
         color="#000000"
@@ -60,7 +60,7 @@ function App() {
       {/* Main Content */}
       <main className="relative z-10 w-full">
         {/* Hero Section */}
-        <section id="home" className="min-h-screen flex flex-col items-center justify-center gap-8 py-20 relative">
+        <section id="home" className="min-h-[70vh] md:min-h-screen flex flex-col items-center justify-center gap-4 md:gap-8 py-10 md:py-20 relative">
           <div className="w-full z-20 px-4">
             <MorphingText texts={heroTexts} className="text-neutral-900 font-bold whitespace-nowrap text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight" />
           </div>

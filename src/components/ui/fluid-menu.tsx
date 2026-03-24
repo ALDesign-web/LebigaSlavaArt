@@ -88,12 +88,12 @@ export function MenuContainer({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="relative w-12 md:w-16 [--menu-item-spacing:60px] md:[--menu-item-spacing:80px]" data-expanded={isExpanded}>
+    <div className="relative w-14 md:w-16 [--menu-item-spacing:60px] md:[--menu-item-spacing:80px]" data-expanded={isExpanded}>
       {/* Container for all items */}
       <div className="relative">
         {/* First item - always visible */}
         <div
-          className="relative w-12 h-12 md:w-16 md:h-16 bg-gray-100 dark:bg-gray-800 cursor-pointer rounded-full group will-change-transform z-50 flex items-center justify-center"
+          className="relative w-14 h-14 md:w-16 md:h-16 bg-gray-100 dark:bg-gray-800 cursor-pointer rounded-full group will-change-transform z-50 flex items-center justify-center"
           onClick={handleToggle}
         >
           {childrenArray[0]}
@@ -103,7 +103,7 @@ export function MenuContainer({ children }: { children: React.ReactNode }) {
         {childrenArray.slice(1).map((child, index) => (
           <div
             key={index}
-            className="absolute top-0 left-0 w-12 h-12 md:w-16 md:h-16 bg-gray-100 dark:bg-gray-800 will-change-transform flex items-center justify-center"
+            className="absolute top-0 left-0 w-14 h-14 md:w-16 md:h-16 bg-gray-100 dark:bg-gray-800 will-change-transform flex items-center justify-center"
             style={{
               transform: isExpanded ? `translateY(calc(var(--menu-item-spacing) * ${index + 1}))` : 'translateY(0px)',
               opacity: isExpanded ? 1 : 0,
